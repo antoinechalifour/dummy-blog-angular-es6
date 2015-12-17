@@ -1,0 +1,19 @@
+<div class="mdl-card mdl-shadow--2dp db-card">
+  <div class="mdl-card__title db-card__title" ng-style="cardStyle(apppostcard.post)">
+    <div class="db-card__title-overlay"></div>
+    <h2 class="mdl-card__title-text db-card__title-text">{{apppostcard.post.title | limitTo: 25}}</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <strong>{{apppostcard.author.firstname}} {{apppostcard.author.lastname}}</strong>
+    <div>{{apppostcard.author.email}}</div>
+  </div>
+
+  <div class="mdl-card__supporting-text">
+    {{apppostcard.post.body | limitTo: 500}}
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-js-button mdl-js-ripple-effect" ui-sref="post({id: apppostcard.post.id})">
+      Read more
+    </a>
+  </div>
+</div>
