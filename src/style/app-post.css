@@ -1,0 +1,27 @@
+.db-post__title {
+  position: relative;
+}
+
+.db-post__title-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.db-post__title-icon,
+.db-post__title-text {
+  color: #fff;
+  z-index: 50;
+}
+
+.db-post__post-title {
+  font-size: 48px;
+}
+
+.db-post__post-body {
+  line-height: 25px;
+}

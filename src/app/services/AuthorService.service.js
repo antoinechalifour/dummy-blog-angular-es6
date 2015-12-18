@@ -10,9 +10,7 @@ export class AuthorService {
 
   getAuthor(id) {
     return this.$http.get(`${POSTS_URI}/${id}`)
-      .then(response => {
-        return response.data;
-      });
+      .then(response => response.data);
   }
 }
 
