@@ -8,9 +8,7 @@ export class AppPostCtrl {
 
         return AuthorService.getAuthor(this.post.id);
       })
-      .then(author => {
-        this.author = author;
-      });
+      .then(author => this.author = author);
   }
 }
 

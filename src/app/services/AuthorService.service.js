@@ -1,7 +1,7 @@
 import { constants } from '../utils/constants';
 import * as url from 'url';
 
-let POSTS_URI = url.resolve(constants.host, constants.uris.authors);
+let AUTHORS_URI = url.resolve(constants.host, constants.uris.authors);
 
 export class AuthorService {
   constructor($http) {
@@ -9,7 +9,12 @@ export class AuthorService {
   }
 
   getAuthor(id) {
-    return this.$http.get(`${POSTS_URI}/${id}`)
+    return this.$http.get(`${AUTHORS_URI}/${id}`)
+      .then(response => response.data);
+  }
+
+  getPosts(authorId) {
+    return this.$http.get(`${AUTHORS_URI}/${authorId}/${constants.uris.posts}`)
       .then(response => response.data);
   }
 }

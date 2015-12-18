@@ -11,7 +11,7 @@
   <div class="mdl-card__title">
     <h1 class="mdl-card__title-text db-post__post-title">{{apppost.post.title}}</h1>
   </div>
-  <div class="mdl-card__supporting-text">
+  <div class="mdl-card__supporting-text db-post__author" ui-sref="author({id: apppost.author.id})">
     <strong>{{apppost.author.firstname}} {{apppost.author.lastname}}</strong>
     <div>{{apppost.author.email}}</div>
   </div>

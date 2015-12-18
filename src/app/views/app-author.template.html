@@ -1,0 +1,25 @@
+<div class="mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <div class=""></div>
+      <div class="mdl-layout__drawer-button"><i class="material-icons" ui-sref="app.posts">keyboard_backspace</i></div>
+      <span class="mdl-layout-title">Author detail</span>
+    </div>
+  </header>
+</div>
+<div class="db-content db-author">
+  <div class="db-author__profile">
+    <div class="db-author__profile-picture">
+      <img ng-src="{{computeProfilePicture(appauthor.author)}}">
+    </div>
+    <div class="db-author__profile-text">
+      <strong>{{appauthor.author.firstname}} {{appauthor.author.lastname}}</strong>
+      <div>
+        {{appauthor.author.email}}
+      </div>
+    </div>
+  </div>
+
+  <app-post-card class="db-post" ng-repeat="post in appauthor.posts" post="post"></app-post-card>
+
+</div>

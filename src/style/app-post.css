@@ -25,3 +25,12 @@
 .db-post__post-body {
   line-height: 25px;
 }
+
+.db-post__author {
+  cursor: pointer;
+  transition: all .4s ease-in;
+}
+
+.db-post__author:hover {
+  color: black;
+}

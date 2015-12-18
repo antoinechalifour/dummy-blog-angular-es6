@@ -4,9 +4,7 @@ export class AppPostCardCtrl {
     this.authorService = AuthorService;
     this.authorService
       .getAuthor(this.post.authorId)
-      .then(author => {
-        this.author = author;
-      });
+      .then(author => this.author = author);
   }
 }
 
