@@ -1,7 +1,9 @@
+import template from '../views/app-albums.template.html';
+
 export function appAlbums() {
   return {
     restrict: 'EA',
-    templateUrl: 'app/views/app-albums.template.html',
+    template,
     controller: 'AppAlbumsCtrl',
     controllerAs: 'appalbums',
     bindToController: true

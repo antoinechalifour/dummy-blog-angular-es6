@@ -1,3 +1,5 @@
+import 'angular';
+import uiRouter from 'angular-ui-router';
 import { autoregister as register } from './utils/autoregister'
 
 import { appPosts } from './directives/app-posts.directive';
@@ -15,11 +17,13 @@ import { AlbumService } from './services/AlbumService.service';
 import { PostService } from './services/PostService.service';
 import { AuthorService } from './services/AuthorService.service';
 
+import appTemplate from './views/app.template.html';
+
 function moduleConfig($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('app', {
       abstract: true,
-      templateUrl: 'app/views/app.template.html',
+      template: appTemplate,
       controller: 'AppCtrl',
       controllerAs: 'app'
     })
@@ -73,3 +77,5 @@ register(app, {
     AuthorService
   ]
 });
+
+export default 'dummyblog';

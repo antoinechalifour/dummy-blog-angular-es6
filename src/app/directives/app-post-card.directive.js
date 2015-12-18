@@ -1,3 +1,5 @@
+import template from '../views/app-post-card.template.html';
+
 function link() {
   return function(scope, el, attrs) {
     const vm = scope;
@@ -24,7 +26,7 @@ export function appPostCard() {
     scope: {
       post: '='
     },
-    templateUrl: 'app/views/app-post-card.template.html',
+    template,
     link: link(),
     controller: 'AppPostCardCtrl',
     controllerAs: 'apppostcard',

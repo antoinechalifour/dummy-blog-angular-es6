@@ -1,7 +1,9 @@
+import template from '../views/app-post.template.html';
+
 export function appPost() {
   return {
     restrict: 'EA',
-    templateUrl: 'app/views/app-post.template.html',
+    template,
     controller: 'AppPostCtrl',
     controllerAs: 'apppost',
     bindToController: true
