@@ -22,3 +22,5 @@ export class PostService {
     })
   }
 }
+
+PostService.$inject = ['$http'];

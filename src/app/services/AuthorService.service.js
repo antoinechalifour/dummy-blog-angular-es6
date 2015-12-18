@@ -15,3 +15,5 @@ export class AuthorService {
       });
   }
 }
+
+AuthorService.$inject = ['$http'];

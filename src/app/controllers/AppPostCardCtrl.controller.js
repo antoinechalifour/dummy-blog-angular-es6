@@ -9,3 +9,5 @@ export class AppPostCardCtrl {
       });
   }
 }
+
+AppPostCardCtrl.$inject = ['$state', 'AuthorService'];

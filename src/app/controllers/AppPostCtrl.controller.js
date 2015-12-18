@@ -3,3 +3,5 @@ export class AppPostCtrl {
     console.log($stateParams);
   }
 }
+
+AppPostCtrl.$inject = ['$stateParams'];

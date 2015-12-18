@@ -7,3 +7,5 @@ export class AppPostsCtrl {
       });
   }
 }
+
+AppPostsCtrl.$inject = ['PostService'];

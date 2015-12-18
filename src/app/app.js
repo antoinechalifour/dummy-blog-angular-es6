@@ -1,6 +1,5 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import { autoregister as register } from './utils/autoregister'
 
 import { appPosts } from './directives/app-posts.directive';
 import { appPost } from './directives/app-post.directive';
@@ -51,31 +50,24 @@ function moduleConfig($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/posts/');
 }
 
+moduleConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+
 const app = angular.module('dummyblog', ['ui.router'])
   .config(moduleConfig)
+  .directive('appPosts', appPosts)
+  .directive('appPost', appPost)
+  .directive('appAlbums', appAlbums)
+  .directive('appPostCard', appPostCard)
+  .controller('AppCtrl', AppCtrl)
+  .controller('AppPostsCtrl', AppPostsCtrl)
+  .controller('AppPostCtrl', AppPostCtrl)
+  .controller('AppPostCardCtrl', AppPostCardCtrl)
+  .controller('AppAlbumsCtrl', AppAlbumsCtrl)
+  .service('AlbumService', AlbumService)
+  .service('PostService', PostService)
+  .service('AuthorService', AuthorService)
   .run(() => {
     console.log('Dummy blog running');
   });
-
-register(app, {
-  directive: [
-    appPosts,
-    appPost,
-    appAlbums,
-    appPostCard
-  ],
-  controller: [
-    AppCtrl,
-    AppPostsCtrl,
-    AppPostCardCtrl,
-    AppPostCtrl,
-    AppAlbumsCtrl
-  ],
-  service: [
-    PostService,
-    AlbumService,
-    AuthorService
-  ]
-});
 
 export default 'dummyblog';
