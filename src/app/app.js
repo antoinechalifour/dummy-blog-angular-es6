@@ -1,4 +1,4 @@
-import 'angular';
+import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import { autoregister as register } from './utils/autoregister'
 

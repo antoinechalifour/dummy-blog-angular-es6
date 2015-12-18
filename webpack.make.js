@@ -39,7 +39,7 @@ module.exports = (options) => {
     })
   ];
   config.devServer = {
-    contentBase: './src',
+    contentBase: './public',
     stats: {
       modules: false,
       cached: false,
