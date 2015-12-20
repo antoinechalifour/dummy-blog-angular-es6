@@ -1,9 +1,3 @@
 [ui-view] {
   height: 100%;
 }
-
-.db-content {
-  max-width: 900px;
-  width: 95%;
-  margin: 0 auto;
-}
