@@ -1,11 +1,12 @@
 <div class="mdl-card mdl-shadow--2dp db-card">
   <div class="mdl-card__title db-card__title" ng-style="cardStyle(apppostcard.post)">
     <div class="db-card__title-overlay"></div>
-    <h2 class="mdl-card__title-text db-card__title-text">{{apppostcard.post.title | limitTo: 25}}</h2>
+    <h2 class="mdl-card__title-text db-card__title-text">{{apppostcard.post.title}}</h2>
   </div>
   <div class="mdl-card__supporting-text cursor-pointer" ui-sref="author({id: apppostcard.author.id})">
     <strong>{{apppostcard.author.firstname}} {{apppostcard.author.lastname}}</strong>
     <div>{{apppostcard.author.email}}</div>
+    <div>Posted on {{apppostcard.post.posted | date: 'dd/MM/yyyy'}}</div>
   </div>
 
   <div class="mdl-card__supporting-text">

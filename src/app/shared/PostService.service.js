@@ -13,11 +13,11 @@ export default class PostService {
     return this.$http.get(POSTS_URI)
     .then(response => response.data)
     .then(posts => {
-      return posts.map(post => {
-        post.image = 'http://placekitten.com/800/400';
-        return post;
+      return posts.map(p => {
+        p.posted = new Date(p.posted).getTime();
+        return p;
       });
-    })
+    });
   }
 
   getPost(id) {
