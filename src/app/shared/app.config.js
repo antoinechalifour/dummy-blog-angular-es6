@@ -13,7 +13,7 @@ export default function moduleConfig($stateProvider, $urlRouterProvider) {
       url: '/posts/',
       views: {
         content: {
-          template: '<app-posts></app-posts>'
+          template: '<app-posts filter="{{app.search}}"></app-posts>'
         }
       }
     })

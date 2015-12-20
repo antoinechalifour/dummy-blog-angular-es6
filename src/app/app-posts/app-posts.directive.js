@@ -6,6 +6,9 @@ export default function appPosts() {
   return {
     restrict: 'EA',
     template,
+    scope: {
+      filter: '@'
+    },
     controller,
     controllerAs: 'appposts',
     bindToController: true

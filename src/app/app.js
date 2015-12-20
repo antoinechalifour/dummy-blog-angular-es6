@@ -5,13 +5,13 @@ import moduleConfig from './shared/app.config';
 import PostService from './shared/PostService.service';
 import AuthorService from './shared/AuthorService.service';
 
+import postFilter from './app-posts/postFilter.filter';
 import appPosts from './app-posts/app-posts.directive';
 import appPost from './app-post/app-post.directive';
 import appPostCard from './app-post-card/app-post-card.directive';
 import appAuthor from './app-author/app-author.directive';
 
-
-const app = angular.module('dummyblog', ['ui.router'])
+angular.module('dummyblog', ['ui.router'])
   .config(moduleConfig)
   .directive('appPosts', appPosts)
   .directive('appPost', appPost)
