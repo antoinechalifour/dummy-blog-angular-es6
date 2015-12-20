@@ -7,7 +7,6 @@ function link() {
     const vm = scope;
 
     vm.computeProfilePicture = function(author) {
-      console.log(author);
       if(!author) return;
 
       let background = 'http://api.randomuser.me/portraits/men/20.jpg';

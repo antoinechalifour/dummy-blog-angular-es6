@@ -1,15 +1,15 @@
 {
   "name": "dummyblog-angular",
   "version": "1.0.0",
-  "description": "",
+  "description": "A example project to use Angular 1.x with es2015 and Webpack",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.build.js --bail -p",
     "dev": "webpack-dev-server --history-api-fallback --inline --progress",
     "test:live": "karma start --auto-watch --no-single-run"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "antoinechalifour <antoine.chalifour@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
     "babel-core": "^6.3.21",
@@ -28,7 +28,6 @@
   "dependencies": {
     "angular": "^1.4.8",
     "angular-ui-router": "^0.2.15",
-    "flexboxgrid": "^6.3.0",
     "material-design-lite": "^1.0.6"
   }
 }
