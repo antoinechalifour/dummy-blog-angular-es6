@@ -1,3 +1,4 @@
+import './app-post-card.css';
 import controller from './AppPostCardCtrl.controller';
 import template from './app-post-card.template.html';
 
