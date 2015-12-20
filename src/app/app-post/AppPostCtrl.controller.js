@@ -1,4 +1,4 @@
-export class AppPostCtrl {
+export default class AppPostCtrl {
   constructor($stateParams, PostService, AuthorService) {
     const id = $stateParams.id;
     this.service = PostService;

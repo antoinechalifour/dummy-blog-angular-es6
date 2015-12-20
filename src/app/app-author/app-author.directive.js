@@ -1,5 +1,6 @@
-import '../../style/app-author.css';
-import template from '../views/app-author.template.html';
+import './app-author.css';
+import controller from './AppAuthorCtrl.controller';
+import template from './app-author.template.html';
 
 function link() {
   return function(scope, el, attrs){
@@ -19,12 +20,12 @@ function link() {
   }
 }
 
-export function appAuthor() {
+export default function appAuthor() {
   return {
     restrict: 'EA',
     template,
     link: link(),
-    controller: 'AppAuthorCtrl',
+    controller,
     controllerAs: 'appauthor',
     bindToController: true
   };

@@ -1,11 +1,12 @@
-import appTemplate from './views/app.template.html';
+import appTemplate from './app.template.html';
+import controller from './AppCtrl.controller';
 
-export function moduleConfig($stateProvider, $urlRouterProvider) {
+export default function moduleConfig($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('app', {
       abstract: true,
       template: appTemplate,
-      controller: 'AppCtrl',
+      controller,
       controllerAs: 'app'
     })
     .state('app.posts', {

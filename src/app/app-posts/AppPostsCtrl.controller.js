@@ -1,4 +1,4 @@
-export class AppPostsCtrl {
+export default class AppPostsCtrl {
   constructor(PostService) {
     this.postService = PostService;
     this.postService.getPosts()

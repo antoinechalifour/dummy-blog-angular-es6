@@ -1,9 +1,9 @@
-import { constants } from '../utils/constants';
+import constants from './constants';
 import * as url from 'url';
 
 const POSTS_URI = url.resolve(constants.host, constants.uris.posts);
 
-export class PostService {
+export default class PostService {
   constructor($http) {
     this.$http = $http;
     this._posts = [];

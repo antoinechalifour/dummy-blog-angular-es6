@@ -1,5 +1,6 @@
-import '../../style/app-post.css';
-import template from '../views/app-post.template.html';
+import './app-post.css';
+import controller from './AppPostCtrl.controller';
+import template from './app-post.template.html';
 
 function link() {
   return function(scope, el, attrs) {
@@ -18,12 +19,12 @@ function link() {
   };
 }
 
-export function appPost() {
+export default function appPost() {
   return {
     restrict: 'EA',
     template,
     link: link(),
-    controller: 'AppPostCtrl',
+    controller,
     controllerAs: 'apppost',
     bindToController: true
   };

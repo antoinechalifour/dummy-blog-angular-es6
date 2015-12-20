@@ -1,9 +1,9 @@
-import { constants } from '../utils/constants';
+import constants from './constants';
 import * as url from 'url';
 
 let AUTHORS_URI = url.resolve(constants.host, constants.uris.authors);
 
-export class AuthorService {
+export default class AuthorService {
   constructor($http) {
     this.$http = $http;
   }

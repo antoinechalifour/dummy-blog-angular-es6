@@ -1,4 +1,5 @@
-import template from '../views/app-post-card.template.html';
+import controller from './AppPostCardCtrl.controller';
+import template from './app-post-card.template.html';
 
 function link() {
   return function(scope, el, attrs) {
@@ -20,7 +21,7 @@ function link() {
   };
 }
 
-export function appPostCard() {
+export default function appPostCard() {
   return {
     restrict: 'EA',
     scope: {
@@ -28,7 +29,7 @@ export function appPostCard() {
     },
     template,
     link: link(),
-    controller: 'AppPostCardCtrl',
+    controller,
     controllerAs: 'apppostcard',
     bindToController: true
   };

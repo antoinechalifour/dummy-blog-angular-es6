@@ -1,4 +1,4 @@
-export class AppPostCardCtrl {
+export default class AppPostCardCtrl {
   constructor($state, AuthorService) {
     this.$state = $state;
     this.authorService = AuthorService;

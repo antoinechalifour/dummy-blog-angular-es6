@@ -1,4 +1,4 @@
-export class AppAuthorCtrl {
+export default class AppAuthorCtrl {
   constructor($stateParams, AuthorService) {
     const id = $stateParams.id;
     this.authorService = AuthorService;

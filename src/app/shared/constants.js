@@ -1,4 +1,4 @@
-export const constants = {
+const constants = {
   host: 'http://localhost:3000',
   uris: {
     posts: 'posts',
@@ -7,3 +7,5 @@ export const constants = {
     authors: 'authors'
   }
 };
+
+export default constants;
