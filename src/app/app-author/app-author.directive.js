@@ -14,8 +14,10 @@ function link() {
       if(author.gender === 'female') {
         background = 'http://api.randomuser.me/portraits/women/7.jpg';
       }
-      console.log(background);
-      return background;
+      return {
+        'background-image': `url("${background}")`,
+        'background-size': 'cover'
+      };
     };
   }
 }

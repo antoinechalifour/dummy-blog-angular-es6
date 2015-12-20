@@ -15,7 +15,7 @@
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-cell"></div>
       <div class="mdl-cell mdl-cell--8-col mdl-color--white mdl-shadow--2dp db-post__content">
-        <div class="db-post__author">
+        <div class="db-post__author cursor-pointer" ui-sref="author({id: apppost.author.id})">
           <strong>{{apppost.author.firstname}} {{apppost.author.lastname}}</strong> wrote...
         </div>
         <h1>{{apppost.post.title}}</h1>

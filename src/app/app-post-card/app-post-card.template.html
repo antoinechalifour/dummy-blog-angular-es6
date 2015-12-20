@@ -3,7 +3,7 @@
     <div class="db-card__title-overlay"></div>
     <h2 class="mdl-card__title-text db-card__title-text">{{apppostcard.post.title | limitTo: 25}}</h2>
   </div>
-  <div class="mdl-card__supporting-text">
+  <div class="mdl-card__supporting-text cursor-pointer" ui-sref="author({id: apppostcard.author.id})">
     <strong>{{apppostcard.author.firstname}} {{apppostcard.author.lastname}}</strong>
     <div>{{apppostcard.author.email}}</div>
   </div>

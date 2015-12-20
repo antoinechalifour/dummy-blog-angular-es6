@@ -1,25 +1,33 @@
-<div class="mdl-layout--fixed-header">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <div class=""></div>
-      <div class="mdl-layout__drawer-button"><i class="material-icons" ui-sref="app.posts">keyboard_backspace</i></div>
-      <span class="mdl-layout-title">Author detail</span>
+      <span class="mdl-layout__title">Back to articles</span>
     </div>
   </header>
-</div>
-<div class="db-content db-author">
-  <div class="db-author__profile">
-    <div class="db-author__profile-picture">
-      <img ng-src="{{computeProfilePicture(appauthor.author)}}">
-    </div>
-    <div class="db-author__profile-text">
-      <strong>{{appauthor.author.firstname}} {{appauthor.author.lastname}}</strong>
-      <div>
-        {{appauthor.author.email}}
+  <div class="mdl-layout__drawer-button">
+    <i class="material-icons" ui-sref="app.posts">keyboard_backspace</i>
+  </div>
+  <main class="mdl-layout_content">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell-hide-cell"></div>
+      <div class="mdl-cell--8-col">
+        <div class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <div class="mdl-card mdl-cell mdl-cell--3-col-desktop mdl-cell--3-col-tablet mdl-cell--4-col-phone" ng-style="computeProfilePicture(appauthor.author)">
+          </div>
+          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--5-col-tablet mdl-cell--8-col-phone">
+            <div class="mdl-card__supporting-text">
+              <h3>{{appauthor.author.firstname}} {{appauthor.author.lastname}}</h3>
+              <p>{{appauthor.author.email}}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
-  <app-post-card class="db-post" ng-repeat="post in appauthor.posts" post="post"></app-post-card>
-
+    <div class="mdl-grid" ng-repeat="post in appauthor.posts">
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-cell"></div>
+      <div class="mdl-cell mdl-cell--8-col mdl-color--white mdl-shadow--2dp">
+        <app-post-card class="db-post" ng-repeat="post in appauthor.posts" post="post"></app-post-card>
+      </div>
+    </div>
+  </main>
 </div>
