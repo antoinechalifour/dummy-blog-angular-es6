@@ -12,8 +12,7 @@ function link() {
       return {
         'background-image': `url("${post.image}")`,
         'background-size': 'cover',
-        'background-position': 'center',
-        'height': '300px'
+        'background-position': 'center'
       };
     };
   };

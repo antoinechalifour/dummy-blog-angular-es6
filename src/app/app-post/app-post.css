@@ -1,36 +1,30 @@
-.db-post__title {
+.db-post__cover {
+  height: 70vh;
   position: relative;
 }
 
-.db-post__title-overlay {
+.db-post__cover-overlay,
+.db-post__cover-picture {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.db-post__cover-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
 
-.db-post__title-icon,
-.db-post__title-text {
-  color: #fff;
+.db-post__content-picture {
   z-index: 50;
 }
 
-.db-post__post-title {
-  font-size: 48px;
-}
-
-.db-post__post-body {
-  line-height: 25px;
-}
-
-.db-post__author {
-  cursor: pointer;
-  transition: all .4s ease-in;
-}
-
-.db-post__author:hover {
-  color: black;
+.db-post__content {
+  z-index: 60;
+  position: relative;
+  margin-top: -35vh;
+  padding: 48px;
+  border-radius: 2px;
 }

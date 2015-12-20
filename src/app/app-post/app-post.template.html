@@ -1,26 +1,27 @@
-<div class="mdl-layout db-post__title mdl-shadow--2dp" ng-style="computeHeaderStyle(apppost.post)">
-  <header class="mdl-layout__header mdl-layout__header--transparent">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <div class="db-post__title-overlay"></div>
-      <div class="mdl-layout__drawer-button db-post__title-icon"><i class="material-icons" ui-sref="app.posts">keyboard_backspace</i></div>
-      <span class="mdl-layout-title db-post__title-text">Reading article...</span>
+      <span class="mdl-layout__title">Back to posts list</span>
     </div>
   </header>
-</div>
-<div class="db-content mdl-card">
-  <div class="mdl-card__title">
-    <h1 class="mdl-card__title-text db-post__post-title">{{apppost.post.title}}</h1>
+  <div class="mdl-layout__drawer-button">
+    <i class="material-icons" ui-sref="app.posts">keyboard_backspace</i>
   </div>
-  <div class="mdl-card__supporting-text db-post__author" ui-sref="author({id: apppost.author.id})">
-    <strong>{{apppost.author.firstname}} {{apppost.author.lastname}}</strong>
-    <div>{{apppost.author.email}}</div>
-  </div>
-  <div class="mdl-card__supporting-text db-post__post-body">
-    {{apppost.post.body}}
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a ui-sref="app.post" class="mdl-button mdl-js-button mdl-js-ripple-effect">
-      Take me home
-    </a>
-  </div>
+  <main class="mdl-layout_content">
+    <div class="db-post__cover">
+      <div class="db-post__cover-overlay"></div>
+      <div class="db-post__cover-picture" ng-style="computeHeaderStyle(apppost.post)"></div>
+    </div>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-cell"></div>
+      <div class="mdl-cell mdl-cell--8-col mdl-color--white mdl-shadow--2dp db-post__content">
+        <div class="db-post__author">
+          <strong>{{apppost.author.firstname}} {{apppost.author.lastname}}</strong> wrote...
+        </div>
+        <h1>{{apppost.post.title}}</h1>
+        <p>{{apppost.post.body}}</p>
+        <a class="mdl-button mdl-js-button" ui-sref="app.posts">Back to articles</a>
+      </div>
+    </div>
+  </main>
 </div>
