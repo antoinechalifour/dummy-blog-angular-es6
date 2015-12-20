@@ -6,7 +6,7 @@ export default class AppPostCtrl {
       .then(post => {
         this.post = post;
 
-        return AuthorService.getAuthor(this.post.id);
+        return AuthorService.getAuthor(this.post.authorId);
       })
       .then(author => this.author = author);
   }
